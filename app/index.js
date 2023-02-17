@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
-import { Link,Stack } from "expo-router";
+import { Link, Stack, useRouter } from "expo-router";
+import { AntDesign } from "@expo/vector-icons";
 
 export default function Page() {
+  const router = useRouter();
   const users = [
     {
       name: "Adithyan",
@@ -22,6 +24,19 @@ export default function Page() {
 
   return (
     <View style={styles.container}>
+
+      <Stack.Screen
+        options={{
+          headerRight: () => (
+            <AntDesign
+              onPress={() => router.push('/modal')}
+              name="search1"
+              size={24}
+              color="white"
+            />
+          )
+        }}
+      />
 
       <View style={styles.main}>
         <Text style={{ fontSize: 30, fontWeight: "bold" }}>Expo Router Tests</Text>

@@ -1,5 +1,4 @@
 import { Stack, useRouter } from "expo-router";
-import { AntDesign } from "@expo/vector-icons";
 
 export default () => {
     const router = useRouter();
@@ -11,17 +10,6 @@ export default () => {
         headerTitleStyle: {
             fontWeight: 'bold',
         },
-        headerRight: () => (
-            <AntDesign
-                onPress={() => {
-                    router.push('/modal');
-                }}
-                name="search1"
-                size={24}
-                color="white"
-            />
-        )
-
     }}>
         <Stack.Screen
             name="index"
