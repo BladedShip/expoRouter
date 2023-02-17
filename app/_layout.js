@@ -1,4 +1,4 @@
-import { Stack, useRouter } from "expo-router";
+import { Stack, useRouter, Tabs } from "expo-router";
 
 export default () => {
     const router = useRouter();
@@ -11,6 +11,7 @@ export default () => {
             fontWeight: 'bold',
         },
     }}>
+        
         <Stack.Screen
             name="index"
             options={{
@@ -25,6 +26,14 @@ export default () => {
             headerTintColor: 'black',
         }}
         />
+        <Stack.Screen
+            name="home"
+            options={{
+                headerShown: false,
+            }}
+        />
     </Stack>
     )
 }
+
+// export default Tabs;
